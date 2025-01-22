@@ -1,0 +1,142 @@
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.input-area {
+    padding: 10px;
+}
+
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+
+button {
+    border: none;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button img {
+    width: 17px;
+    height: 17px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+.sent {
+    align-items: flex-end;
+}
+
+.received {
+    align-items: flex-start;
+}
+
+.message-content {
+    padding: 8px 15px;
+    border-radius: 15px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+.sent .message-content {
+    background-color: #007BFF;
+    color: white;
+}
+
+.received .message-content {
+    background-color: #f1f0f0;
+    color: black;
+}
+
+.message-timestamp {
+    font-size: 0.75rem;
+    padding-top: 2px;
+}
+
+.sent .message-timestamp {
+    align-self: flex-end;
+    color: #666;
+}
+
+.received .message-timestamp {
+    align-self: flex-start;
+    color: #666;
+}
+
+.typing-indicator {
+    color: gray;
+    margin: 0 10px 5px;
+    font-style: italic;
+}
+
+
+.seen-status {
+    color: gray;
+    font-size: 0.75rem;
+    padding-left: 10px;
+}
+
+
+.client-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.client-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.client-item:hover {
+    background-color: #e6e6e6;
+}
+
+.client-item.selected {
+    background-color: #d9d9d9;
+    font-weight: bold;
+}
+
+.client-name {
+    font-size: 16px;
+}
+
+.notification {
+    font-size: 14px;
+    font-weight: bold;
+    color: #188b97;
+    margin-left: auto;
+}
+
+
+.seen-indicator {
+    color: gray;
+    font-size: 0.75rem;
+    padding-left: 10px;
+    align-self: flex-end;
+}

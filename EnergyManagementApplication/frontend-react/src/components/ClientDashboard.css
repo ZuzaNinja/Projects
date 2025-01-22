@@ -1,0 +1,12 @@
+.client-dashboard {
+    position: relative;
+    height: 100vh;
+}
+
+.chat-trigger {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    cursor: pointer;
+}

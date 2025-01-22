@@ -1,0 +1,213 @@
+services:
+  # Serviciul de bază de date pentru person
+  db-person:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: "user"
+      MYSQL_ROOT_PASSWORD: "364265"
+    ports:
+      - "3307:3306"
+    volumes:
+      - person-db:/var/lib/mysql
+    networks:
+      - demo_net
+
+  # Serviciul person
+  person:
+    build:
+      context: ./person
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 3
+    environment:
+      - DB_IP=db-person
+      - DB_PORT=3306
+      - DB_DBNAME=user
+      - DB_USER=root
+      - DB_PASSWORD=364265
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.spring-person.rule=Host(`person.localhost`) || PathPrefix(`/person`)"
+      - "traefik.http.middlewares.spring-person-strip.stripprefix.prefixes=/person"
+      - "traefik.http.routers.spring-person.middlewares=spring-person-strip"
+      - "traefik.http.services.spring-person.loadbalancer.server.port=8080"
+
+    networks:
+      - demo_net
+
+  # Serviciul de bază de date pentru device
+  db-device:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: "device"
+      MYSQL_ROOT_PASSWORD: "364265"
+    ports:
+      - "3308:3306"
+    volumes:
+      - device-db:/var/lib/mysql
+    networks:
+      - demo_net
+
+  # Serviciul device
+  device:
+    build:
+      context: ./device
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 3
+    environment:
+      - DB_IP=db-device
+      - DB_PORT=3306
+      - DB_DBNAME=device
+      - DB_USER=root
+      - DB_PASSWORD=364265
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_RABBITMQ_USERNAME=admin
+      - SPRING_RABBITMQ_PASSWORD=admin
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.spring-device.rule=Host(`device.localhost`) || PathPrefix(`/device`)"
+      - "traefik.http.middlewares.spring-device-strip.stripprefix.prefixes=/device"
+      - "traefik.http.routers.spring-device.middlewares=spring-device-strip"
+      - "traefik.http.services.spring-device.loadbalancer.server.port=8081"
+
+    depends_on:
+      - db-device
+      - rabbitmq
+    networks:
+      - demo_net
+
+  # Serviciul frontend
+  react_app:
+    build:
+      context: ./frontend-react
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend-react:/app
+      - /app/node_modules
+    environment:
+      - CI=true
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.react-app.rule=Host(`frontend.localhost`)"
+      - "traefik.http.services.react-app.loadbalancer.server.port=3000"
+
+    networks:
+      - demo_net
+
+  # Serviciul de bază de date pentru monitoring-and-communication
+  db-monitoring:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: "energy_consumption"
+      MYSQL_ROOT_PASSWORD: "364265"
+    ports:
+      - "3309:3306"
+    volumes:
+      - monitoring-db:/var/lib/mysql
+    networks:
+      - demo_net
+
+  # Serviciul monitoring-and-communication
+  monitoring-and-communication:
+    build:
+      context: ./monitoring-and-communication
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      - DB_IP=db-monitoring
+      - DB_PORT=3306
+      - DB_DBNAME=energy_consumption
+      - DB_USER=root
+      - DB_PASSWORD=364265
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_RABBITMQ_USERNAME=admin
+      - SPRING_RABBITMQ_PASSWORD=admin
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.spring-monitor.rule=Host(`monitor.localhost`) || PathPrefix(`/monitor`)"
+      - "traefik.http.middlewares.spring-monitor-strip.stripprefix.prefixes=/monitor"
+      - "traefik.http.routers.spring-monitor.middlewares=spring-monitor-strip"
+      - "traefik.http.services.spring-monitor.loadbalancer.server.port=8082"
+    depends_on:
+      - db-monitoring
+      - rabbitmq
+    networks:
+      - demo_net
+
+  
+  # Serviciul chat
+  chat:
+    build:
+      context: ./chat
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_APPLICATION_NAME=chat
+      - SERVER_PORT=8083
+      - SPRING_JACKSON_DATE_FORMAT=yyyy-MM-dd HH:mm:ss
+      - SPRING_JACKSON_SERIALIZATION_WRITE_DATES_AS_TIMESTAMPS=false
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.spring-chat.rule=Host(`chat.localhost`) || PathPrefix(`/chat`)"
+      - "traefik.http.middlewares.spring-chat-strip.stripprefix.prefixes=/chat"
+      - "traefik.http.routers.spring-chat.middlewares=spring-chat-strip"
+      - "traefik.http.services.spring-chat.loadbalancer.server.port=8083"
+    networks:
+      - demo_net
+    
+
+  # RabbitMQ service
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"   
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+    networks:
+      - demo_net
+
+  reverse-proxy:
+    image: traefik:v3.2
+    command:
+      - --api.insecure=true
+      - --providers.docker
+      - --accesslog=true
+      - --accesslog.filepath=/var/log/traefik/access.log
+      - --log.level=DEBUG
+      - --entrypoints.web.address=:80
+    ports:
+      - "80:80"
+      - "8084:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - traefik_logs:/var/log/traefik
+    networks:
+      - demo_net 
+
+volumes:
+  person-db:
+  device-db:
+  monitoring-db:
+  traefik_logs:
+
+networks:
+  demo_net:
+    driver: bridge

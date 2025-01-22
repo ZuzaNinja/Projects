@@ -1,0 +1,21 @@
+.client-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.client-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.client-item:hover {
+    background-color: #e9ecef;
+}
+
+.selected {
+    background-color: #dee2e6;
+}
