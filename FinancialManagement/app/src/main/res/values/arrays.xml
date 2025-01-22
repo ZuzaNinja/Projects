@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array
+        name="spinner_options">
+        <item android:background="@drawable/rounded_edittext">Facturi</item>
+        <item android:background="@drawable/rounded_edittext">Alimente</item>
+        <item android:background="@drawable/rounded_edittext">Rate</item>
+        <item android:background="@drawable/rounded_edittext">Meditatii</item>
+        <item android:background="@drawable/rounded_edittext">Inca ceva</item>
+    </string-array>
+
+    <string-array name="months_array">
+        <item>Noiembrie</item>
+        <item>Decembrie</item>
+        <item>Ianuarie</item>
+    </string-array>
+
+</resources>

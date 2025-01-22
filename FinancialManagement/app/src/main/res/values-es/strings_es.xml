@@ -1,0 +1,303 @@
+<resources>
+
+    <!-- Mesaje pentru StartActivity -->
+    <string name="welcome_message">Monitorea y planifica tu presupuesto</string>
+    <string name="sub_message">Realice un seguimiento y mejore sus ingresos de forma segura y sin esfuerzo</string>
+    <string name="start_button">Empecemos</string>
+
+    <!-- Textul din SelectionActivity -->
+    <string name="title_text">Selecciona el tipo de cuenta</string>
+    <string name="adolescent">Adolescente</string>
+    <string name="adolescent_description">Permite a un adolescente ver su saldo y transacciones. Realiza pagos y transferencias usando las restricciones preestablecidas por los padres.</string>
+    <string name="parent">Padre</string>
+    <string name="parent_description">Permite a un padre establecer y controlar los límites financieros y configuraciones para la cuenta de un adolescente. Visualiza las transacciones y el saldo.</string>
+    <string name="register_button">Regístrate</string>
+    <string name="authenticate_button">Autenticarse</string>
+    <string name="adolescent_selected">Adolescente seleccionado</string>
+    <string name="parent_selected">Padre seleccionado</string>
+    <string name="adolescent_deselected">Adolescente deseleccionado</string>
+    <string name="parent_deselected">Padre deseleccionado</string>
+    <string name="select_account_type">¡Por favor, selecciona un tipo de cuenta!</string>
+
+    <!-- Textul din RegisterActivity -->
+    <string name="register_title">Regístrate</string>
+    <string name="register_description">Hola, introduce tus datos para registrarte.</string>
+    <string name="full_name">Nombre y apellido</string>
+    <string name="email">Correo electrónico</string>
+    <string name="phone_number">Número de teléfono</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Introduce de nuevo la contraseña</string>
+    <string name="google_login">Autenticación con Google</string>
+    <string name="or_text">O</string>
+    <string name="redirect_to_google">Redirigiendo a Google...</string>
+
+    <!-- Textul din AuthenticationActivity -->
+    <string name="authentication_title">Autentícate</string>
+    <string name="authentication_subtitle">Hola, introduce tus datos para acceder a tu cuenta.</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="register_message">¿No tienes cuenta?</string>
+    <string name="register_link"> Regístrate</string>
+    <string name="check">Verifica tu correo electrónico ingresado anteriormente...</string>
+    <string name="verify_all">¡Todos los campos deben completarse!</string>
+    <string name="loginFail">Autenticación fallida. ¡Correo electrónico o contraseña incorrectos!</string>
+    <string name="loginSucces">"¡Autenticación exitosa!"</string>
+
+    <!-- Text pentru bugete -->
+    <string name="facturi">Facturas</string>
+    <string name="alimente">Alimentos</string>
+    <string name="buget_salvat_succes">¡El presupuesto se ha guardado con éxito!</string>
+    <string name="noua_sectiune">Nueva sección:</string>
+    <string name="denumire">Nombre</string>
+    <string name="suma">Monto (RON)</string>
+    <string name="salveaza">Guardar ✓</string>
+    <string name="anuleaza">Cancelar ✗</string>
+    <string name="add_section">Agregar sección</string>
+    <string name="modify_section">Modificar sección</string>
+    <string name="fond_urgenta">Fondo de emergencia</string>
+    <string name="invata">Aprender</string>
+    <string name="completeaza_campuri">¡Completa todos los campos!</string>
+    <string name="rate">Cuotas</string>
+    <string name="selecteaza_categorie">Selecciona una categoría</string>
+    <string name="modifica">Modificar</string>
+    <string name="noua_valoare_suma">¡Añadir el nuevo valor del monto!</string>
+    <string name="sectiune_modificata">¡La sección ha sido modificada!</string>
+    <string name="text_lung_bugete">Asignando una cantidad dedicada para situaciones imprevistas, como reparaciones, gastos médicos u otros eventos inesperados, garantizas tener recursos a mano sin afectar otros objetivos financieros. Establecer un fondo de emergencia te ayuda a reducir el estrés y mantener el control de tus finanzas, sin importar las circunstancias. ¡Empieza ahora agregando una cantidad, por pequeña que sea, para construir una reserva de seguridad!</string>
+
+    <!-- Budget -->
+    <string name="budget_groceries">Comestibles</string>
+    <string name="budget_rent">Alquiler</string>
+    <string name="budget_utilities">Servicios</string>
+    <string name="already_on_homepage">¡Ya estás en la página principal!</string>
+    <string name="feature_in_development">¡Funcionalidad en desarrollo!</string>
+
+    <string name="icon1">Snikers</string>
+    <string name="icon2">Auriculares</string>
+    <string name="icon3">Coche</string>
+
+    <string name="objective_completed_message">¡Objetivo ya alcanzado!</string>
+
+    <string name="default_email">N/A</string>
+    <string name="default_user_type">N/A</string>
+    <string name="user_email_log">Correo del usuario: %s</string>
+    <string name="user_type_log">Tipo de usuario: %s</string>
+    <string name="reports_not_implemented">¡Los informes aún no están implementados!</string>
+
+    <!-- Mesaje de validare -->
+    <string name="name_required">¡El nombre es obligatorio!</string>
+    <string name="name_capital_required">¡El nombre debe comenzar con una letra mayúscula!</string>
+    <string name="email_required">¡El correo electrónico es obligatorio!</string>
+    <string name="invalid_email">¡Correo electrónico inválido! (El formato debe ser @gmail.com, @yahoo.com, @gmail.ro o @yahoo.ro)</string>
+    <string name="phone_required">¡El número de teléfono es obligatorio!</string>
+    <string name="phone_invalid">¡El número de teléfono debe tener 10 dígitos!</string>
+    <string name="password_required">¡La contraseña es obligatoria!</string>
+    <string name="password_minimum_length">¡La contraseña debe tener al menos 5 caracteres!</string>
+    <string name="confirm_password_required">¡La confirmación de la contraseña es obligatoria!</string>
+    <string name="passwords_do_not_match">¡Las contraseñas no coinciden!</string>
+
+
+    <string name="login_successful">¡Autenticación exitosa!</string>
+    <string name="login_failed">¡Autenticación fallida! Por favor, inténtalo de nuevo.</string>
+    <string name="enter_email">Introduce el correo electrónico</string>
+    <string name="enter_password">Introduce la contraseña</string>
+
+    <string name="registration_failed">¡Registro fallido!</string>
+    <string name="registration_successful">¡Registro exitoso!</string>
+
+    <string name="objective_car">Coche</string>
+    <string name="objective_headphones">Auriculares</string>
+    <string name="objective_sneakers">Zapatillas</string>
+    <string name="objective_bicycle">Bicicleta</string>
+    <string name="objective_skateboard">Monopatín</string>
+    <string name="objective_smartphone">Teléfono inteligente</string>
+
+    <string name="profile_toast">Perfil (en progreso)</string>
+    <string name="security_toast">Seguridad (en progreso)</string>
+    <string name="alert_toast">Alertas (en progreso)</string>
+    <string name="language_toast">Idioma (en progreso)</string>
+    <string name="reports_toast">Informes (en progreso)</string>
+    <string name="unknown_action">Acción desconocida</string>
+    <string name="read_notification">Has leído: %1$s</string>
+    <string name="pusculita_in_progress">Hucha (en progreso)</string>
+    <string name="learn_in_progress">Aprendizaje (en progreso)</string>
+    <string name="reports_in_progress">Informes (en progreso)</string>
+
+    <!-- Nume Objective -->
+    <string name="select_icon">Selecciona un icono</string>
+    <string name="headphones">Auriculares</string>
+    <string name="sneakers">Zapatillas</string>
+    <string name="smartphone">Teléfono inteligente</string>
+    <string name="tablet">Tableta</string>
+    <string name="bicycle">Bicicleta</string>
+    <string name="ski">Esquí</string>
+    <string name="roller_skate">Patines</string>
+    <string name="concert">Concierto</string>
+    <string name="candy">Caramelos</string>
+    <string name="controller">Mando</string>
+    <string name="camera">Cámara</string>
+    <string name="skateboard">Monopatín</string>
+    <string name="books">Libros</string>
+    <string name="perfume">Perfume</string>
+    <string name="jacket">Chaqueta</string>
+    <string name="airpods">AirPods</string>
+    <string name="laptop">Ordenador portátil</string>
+
+    <!-- Messages -->
+    <string name="objective_created_message">¡Has añadido un nuevo objetivo: %1$s!</string>
+    <string name="complete_all_fields">¡Completa todos los campos correctamente!</string>
+    <string name="saving">Guardando...</string>
+    <string name="piggy_bank_not_ready">Hucha (en progreso)</string>
+    <string name="learning_not_ready">Aprendizaje (en progreso)</string>
+
+    <string name="settings_in_progress">Configuraciones (en progreso)</string>
+    <string name="objective_created">Objetivo Creado</string>
+    <string name="objective_created_success">¡Has añadido un nuevo objetivo: %s!</string>
+    <string name="objective_added_success">¡Objetivo añadido con éxito!</string>
+
+    <!-- Icon Labels -->
+    <string name="icon_select">Seleccionar...</string>
+    <string name="icon_car">Coche</string>
+    <string name="icon_headphones">Auriculares</string>
+    <string name="icon_sneakers">Zapatillas</string>
+    <string name="icon_smartphone">Teléfono inteligente</string>
+    <string name="icon_tablet">Tableta</string>
+    <string name="icon_bicycle">Bicicleta</string>
+    <string name="icon_ski">Esquí</string>
+    <string name="icon_vacation">Vacaciones</string>
+    <string name="icon_concert">Concierto</string>
+    <string name="icon_camera">Cámara de fotos</string>
+    <string name="icon_perfume">Perfume</string>
+    <string name="icon_house">Casa</string>
+    <string name="icon_jacket">Chaqueta</string>
+    <string name="icon_airpods">AirPods</string>
+    <string name="icon_laptop">Ordenador portátil</string>
+
+    <string name="toast_select_objective">¡Selecciona un objetivo!</string>
+    <string name="error_specify_amount">¡Especifica la cantidad a añadir!</string>
+    <string name="error_exceeds_objective">¡La cantidad añadida supera el objetivo seleccionado!</string>
+    <string name="success_amount_added">¡La cantidad se ha añadido con éxito!</string>
+    <string name="toast_objective_completed">¡Objetivo completado! ✅</string>
+
+    <string name="notification_amount_added_title">Cantidad Añadida</string>
+    <string name="notification_amount_added_message">¡Has añadido %1$s RON al objetivo: %2$s!</string>
+
+    <string name="button_cancel">Cancelar</string>
+    <string name="button_add_amount">Añadir Cantidad</string>
+    <string name="button_manage_objective">Gestionar Objetivo</string>
+
+    <!-- layout -->
+    <string name="welcome_back_message">¡Bienvenido de nuevo!</string>
+    <string name="action_add">Agregar</string>
+    <string name="action_request">Solicitar</string>
+    <string name="action_send">Enviar</string>
+    <string name="challenges_title">Desafíos</string>
+    <string name="see_all">Ver todo</string>
+    <string name="recent_transactions">Transacciones recientes</string>
+    <string name="home_button">Inicio</string>
+    <string name="piggy_bank_button">Hucha</string>
+    <string name="goals_button">Objetivos</string>
+    <string name="learn_button">Aprender</string>
+
+    <string name="account_title">Mi cuenta</string>
+    <string name="details_section">Detalles</string>
+    <string name="teen_account">Cuenta adolescente</string>
+    <string name="more_section">Más</string>
+    <string name="budget_button">Presupuestos</string>
+    <string name="reports_button">Informes</string>
+    <string name="settings_button">Configuración</string>
+
+    <string name="profile_text">Perfil</string>
+    <string name="notifications_text">Notificaciones</string>
+    <string name="security_text">Seguridad</string>
+    <string name="alert_text">Configurar alerta</string>
+    <string name="language_text">Cambiar idioma</string>
+    <string name="home_text">Inicio</string>
+    <string name="budget_text">Presupuestos</string>
+    <string name="goals_text">Objetivos</string>
+    <string name="reports_text">Informes</string>
+    <string name="settings_text">Configuración</string>
+
+    <string name="denumire_label">Nombre:</string>
+    <string name="amount_label">Cantidad (RON):</string>
+    <string name="home_label">Inicio</string>
+    <string name="budget_label">Presupuestos</string>
+    <string name="goals_label">Objetivos</string>
+    <string name="reports_label">Informes</string>
+    <string name="settings_label">Configuración</string>
+    <string name="profile_label">Perfil</string>
+    <string name="notifications_label">Notificaciones</string>
+    <string name="security_label">Seguridad</string>
+    <string name="set_alert_label">Configurar alerta</string>
+    <string name="change_language_label">Cambiar idioma</string>
+
+    <string name="plan_long_term">Planificar a largo plazo</string>
+
+    <string name="emergency_fund_text">Fondo de emergencia</string>
+    <string name="info_text">Asignando una cantidad dedicada para...</string>
+    <string name="fund_hint">Cantidad para el fondo</string>
+    <string name="enter_amount_text">¡Introduce la cantidad deseada!</string>
+    <string name="fund_created_text">¡Fondo creado!</string>
+
+    <string name="notification_title">Título de la notificación</string>
+    <string name="notification_description">Descripción de la notificación</string>
+    <string name="notification_timestamp">12/04/2024 14:30:00</string>
+
+    <string name="add_objective">Añadir objetivo</string>
+    <string name="manage_objective">Gestionar objetivo</string>
+    <string name="amount_added">Cantidad añadida (RON):</string>
+    <string name="add_button">Añadir</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="error_message1">¡Especifica la cantidad a añadir!</string>
+    <string name="error_message2">¡La cantidad añadida supera el objetivo seleccionado!</string>
+    <string name="success_message">¡Cantidad añadida con éxito!</string>
+
+    <string name="hint_text">Escribir...</string>
+    <string name="suma_label">Cantidad (RON):</string>
+    <string name="iconita_label">Icono:</string>
+    <string name="error_message">¡Completa todos los campos!</string>
+    <string name="objective_title">Zapatillas</string>
+    <string name="objective_amount">300 RON / 560 RON</string>
+    <string name="view_objectives_text">¡Consulta tus objetivos!</string>
+
+    <string name="objective_finished_title">Objetivo Completado</string>
+    <string name="objective_finished_message">¡Felicidades! Has completado el objetivo: %1$s</string>
+
+    <string name="hint_denumire">Introduce el nombre del objetivo</string>
+    <string name="hint_suma">Introduce la cantidad en RON</string>
+    <string name="hint_suma_fond">Cantidad para el fondo</string>
+    <string name="hint_scrie">Escribe...</string>
+
+    <string name="button_confirm">Confirmar</string>
+    <string name="select_language_warning">Por favor, selecciona una opción!</string>
+    <string name="select_language_title">Selecciona el idioma</string>
+    <string name="language_updated">¡El idioma se ha actualizado con éxito!</string>
+    <string-array name="language_options">
+        <item>Selecciona una opción</item>
+        <item>Rumano</item>
+        <item>Inglés</item>
+        <item>Español</item>
+    </string-array>
+
+    <string name="username_placeholder">John Doe</string>
+    <string name="email_account">Correo electrónico-></string>
+    <string name="phone_account">Teléfono-></string>
+    <string name="password_account">Contraseña-></string>
+    <string name="email_placeholder">johndoe@example.com</string>
+    <string name="phone_placeholder">+0000000000</string>
+    <string name="password_placeholder">******</string>
+    <string name="show_button">Mostrar contraseña</string>
+    <string name="change_button">Cambiar contraseña</string>
+    <string name="save_button">Guardar contraseña</string>
+    <string name="logout_button">Cerrar sesión</string>
+    <string name="password_updated">¡La contraseña ha sido actualizada con éxito!</string>
+    <string name="edit_password_message">Ahora puedes editar la contraseña.</string>
+
+    <string name="role_adolescent">Adolescent</string>
+    <string name="role_parent">Parent</string>
+
+    <string name="error_updating_password">Error al actualizar la contraseña. Por favor, inténtelo de nuevo.</string>
+    <string name="calculeaza">Computador</string>
+    <string name="venit_lunar">Venidos lunaros</string>
+    <string name="introdu_venitul_lunar">Introdos lunaros venidos</string>
+    <string name="se_va_aplica_regula_50_30_20">Se aplicará la regla 50/30/20</string>
+
+</resources>

@@ -1,0 +1,302 @@
+<resources>
+    <string name="app_name" translatable="false">ProiectPIU_ManagementFinanciar</string>
+
+    <!-- Mesaje pentru StartActivity -->
+    <string name="welcome_message">Monitorizează și planifică bugetul</string>
+    <string name="sub_message">Urmărește și îmbunătățește venitul în siguranță, fără efort</string>
+    <string name="start_button">Să începem</string>
+
+    <!-- Textul din SelectionActivity -->
+    <string name="title_text">Selectează tipul contului</string>
+    <string name="adolescent">Adolescent</string>
+    <string name="adolescent_description">Permite unui adolescent să își vizualizeze soldul și tranzacțiile. Efectuează plăți și transferuri folosind restricțiile prestabilite de către părinți.</string>
+    <string name="parent">Părinte</string>
+    <string name="parent_description">Permite unui părinte să stabilească și să controleze limitele financiare și setările pentru contul unui adolescent. Vizualizează tranzacțiile și soldul.</string>
+    <string name="register_button">Înregistrează-te</string>
+    <string name="authenticate_button">Autentificare</string>
+    <string name="adolescent_selected">Adolescent selectat</string>
+    <string name="parent_selected">Părinte selectat</string>
+    <string name="adolescent_deselected">Adolescent deselectat</string>
+    <string name="parent_deselected">Părinte deselectat</string>
+    <string name="select_account_type">Te rugăm să selectezi un tip de cont!</string>
+
+    <!-- Textul din RegisterActivity -->
+
+    <string name="register_title">Înregistrează-te</string>
+    <string name="register_description">Hei, introdu detaliile tale pentru a te înregistra.</string>
+    <string name="full_name">Nume și prenume</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Număr de telefon</string>
+    <string name="password">Parola</string>
+    <string name="confirm_password">Introdu din nou parola</string>
+    <string name="google_login">Autentificare cu Google</string>
+    <string name="or_text">Sau</string>
+    <string name="redirect_to_google">Redirecționare spre Google...</string>
+
+    <!-- Textul din AuthenticationActivity -->
+
+    <string name="authentication_title">Autentifică-te</string>
+    <string name="authentication_subtitle">Hei, introdu detaliile tale pentru a te autentifica în contul tău.</string>
+    <string name="forgot_password">Ai uitat parola?</string>
+    <string name="register_message">Nu ai cont? </string>
+    <string name="register_link"> Înregistrează-te</string>
+    <string name="check">Verifică-ți email-ul introdus anterior...</string>
+    <string name="verify_all">Toate câmpurile trebuie completate!</string>
+    <string name="loginFail">Autentificare fără succes. Email sau parolă incorecte!</string>
+    <string name="loginSucces">"Autentificare cu succes!"</string>
+
+    <!--  Text pentru bugete  -->
+    <string name="facturi">Facturi</string>
+    <string name="alimente">Alimente</string>
+    <string name="buget_salvat_succes">Bugetul a fost salvat cu succes!</string>
+    <string name="noua_sectiune">Noua secțiune:</string>
+    <string name="denumire">Denumire</string>
+    <string name="suma">Suma(RON)</string>
+    <string name="salveaza">Salvează ✓</string>
+    <string name="anuleaza">Anulează ✗</string>
+    <string name="calculeaza">Calculează</string>
+    <string name="venit_lunar">Venit lunar</string>
+    <string name="add_section">Adaugă secțiune</string>
+    <string name="modify_section">Modifică secțiune</string>
+    <string name="fond_urgenta">Fond de urgență</string>
+    <string name="invata">Învață </string>
+    <string name="completeaza_campuri">Completeaza toate câmpurile!</string>
+    <string name="rate">Rate</string>
+    <string name="selecteaza_categorie">Selecteaza o categorie</string>
+    <string name="modifica">Modifică</string>
+    <string name="plan_long_term">Planifică pe termen lung</string>
+    <string name="noua_valoare_suma">Adaugă noua valoare a sumei!</string>
+    <string name="sectiune_modificata">Secțiunea a fost modificată!</string>
+    <string name="text_lung_bugete">Alocând o sumă dedicată pentru situații neprevăzute, precum reparații, cheltuieli medicale sau alte evenimente neaşteptate, vă asigurati că aveți resurse la îndemână fără a afecta alte obiective financiare. Stabilirea unui fond de urgență vă ajută să reduceți stresul şi să vă menţineţi controlul asupra finanţelor, indiferent de circumstanțe. Începeţi acum prin a adăuga o sumă, oricât de mică, pentru a construi o rezervă de siguranță!</string>
+
+    <!-- Budget -->
+    <string name="budget_groceries">Groceries</string>
+    <string name="budget_rent">Rent</string>
+    <string name="budget_utilities">Utilities</string>
+    <string name="already_on_homepage">Ești deja pe pagina principală!</string>
+    <string name="feature_in_development">Funcționalitate în dezvoltare!</string>
+
+    <string name="icon1">Snikers</string>
+    <string name="icon2">Headphones</string>
+    <string name="icon3">Car</string>
+
+    <string name="objective_completed_message">Obiectiv deja atins!</string>
+
+    <string name="default_email">N/A</string>
+    <string name="default_user_type">N/A</string>
+    <string name="user_email_log">User Email: %s</string>
+    <string name="user_type_log">User Type: %s</string>
+    <string name="reports_not_implemented">Raportele nu sunt implementate încă!</string>
+
+    <!-- Mesaje pentru validare -->
+    <string name="name_required">Numele este obligatoriu!</string>
+    <string name="name_capital_required">Numele trebuie să înceapă cu literă mare!</string>
+    <string name="email_required">Email-ul este obligatoriu!</string>
+    <string name="invalid_email">Email invalid! (Formatul trebuie să fie de tipul @gmail.com, @yahoo.com, @gmail.ro sau @yahoo.ro)</string>
+    <string name="phone_required">Numărul de telefon este obligatoriu!</string>
+    <string name="phone_invalid">Numărul de telefon trebuie să aibă 10 cifre!</string>
+    <string name="password_required">Parola este obligatorie!</string>
+    <string name="password_minimum_length">Parola trebuie să fie de minim 5 caractere!</string>
+    <string name="confirm_password_required">Confirmarea parolei este obligatorie!</string>
+    <string name="passwords_do_not_match">Parolele nu se potrivesc!</string>
+
+    <string name="login_successful">Autentificare cu succes!</string>
+    <string name="login_failed">Autentificare eșuată. Te rugăm să încerci din nou!</string>
+    <string name="enter_email">Introdu email-ul</string>
+    <string name="enter_password">Introdu parola</string>
+
+    <string name="registration_failed">Înregistrare a eșuat!</string>
+    <string name="registration_successful">Înregistrare cu succes!</string>
+
+    <string name="objective_car">Mașină</string>
+    <string name="objective_headphones">Căști</string>
+    <string name="objective_sneakers">Adidași</string>
+    <string name="objective_bicycle">Bicicletă</string>
+    <string name="objective_skateboard">Skateboard</string>
+    <string name="objective_smartphone">Smartphone</string>
+
+    <string name="profile_toast">Profile (în lucru)</string>
+    <string name="security_toast">Securitate (în lucru)</string>
+    <string name="alert_toast">Alerte (în lucru)</string>
+    <string name="language_toast">Limbă (în lucru)</string>
+    <string name="reports_toast">Rapoarte (în lucru)</string>
+    <string name="unknown_action">Acțiune necunoscută</string>
+    <string name="read_notification">Ai citit: %1$s</string>
+    <string name="pusculita_in_progress">Pușculiță (în lucru)</string>
+    <string name="learn_in_progress">Învățare (în lucru)</string>
+    <string name="reports_in_progress">Rapoarte (în lucru)</string>
+
+    <!-- Nume Objective -->
+    <string name="select_icon">Selectează o iconiță</string>
+    <string name="headphones">Căști</string>
+    <string name="sneakers">Adidași</string>
+    <string name="smartphone">Smartphone</string>
+    <string name="tablet">Tabletă</string>
+    <string name="bicycle">Bicicletă</string>
+    <string name="ski">Schi</string>
+    <string name="roller_skate">Role</string>
+    <string name="concert">Concert</string>
+    <string name="candy">Bomboane</string>
+    <string name="controller">Controller</string>
+    <string name="camera">Cameră Foto</string>
+    <string name="skateboard">Skateboard</string>
+    <string name="books">Cărți</string>
+    <string name="perfume">Parfum</string>
+    <string name="jacket">Geacă</string>
+    <string name="airpods">AirPods</string>
+    <string name="laptop">Laptop</string>
+
+    <!-- Messages -->
+    <string name="objective_created_message">Ai adăugat un nou obiectiv: %1$s!</string>
+    <string name="complete_all_fields">Completează toate câmpurile corect!</string>
+    <string name="saving">Salvând...</string>
+    <string name="piggy_bank_not_ready">Pușculiță (în lucru)</string>
+    <string name="learning_not_ready">Învățare (în lucru)</string>
+
+    <string name="settings_in_progress">Setări (în lucru)</string>
+    <string name="objective_created">Obiectiv Creat</string>
+    <string name="objective_created_success">Ai adăugat un nou obiectiv: %s!</string>
+    <string name="objective_added_success">Obiectiv adăugat cu succes!</string>
+
+    <!-- Icon Labels -->
+    <string name="icon_select">Selectează...</string>
+    <string name="icon_car">Mașină</string>
+    <string name="icon_headphones">Căști</string>
+    <string name="icon_sneakers">Adidași</string>
+    <string name="icon_smartphone">Smartphone</string>
+    <string name="icon_tablet">Tabletă</string>
+    <string name="icon_bicycle">Bicicletă</string>
+    <string name="icon_ski">Schi</string>
+    <string name="icon_vacation">Vacanță</string>
+    <string name="icon_concert">Concert</string>
+    <string name="icon_camera">Cameră Foto</string>
+    <string name="icon_perfume">Parfum</string>
+    <string name="icon_house">Casă</string>
+    <string name="icon_jacket">Geacă</string>
+    <string name="icon_airpods">AirPods</string>
+    <string name="icon_laptop">Laptop</string>
+
+    <string name="toast_select_objective">Selectează un obiectiv!</string>
+    <string name="error_specify_amount">Specifică suma de adăugat!</string>
+    <string name="error_exceeds_objective">Suma adăugată depășește obiectivul ales!</string>
+    <string name="success_amount_added">Suma a fost adăugată cu succes!</string>
+    <string name="toast_objective_completed">Obiectiv completat! ✅</string>
+
+    <string name="notification_amount_added_title">Sumă Adăugată</string>
+    <string name="notification_amount_added_message">Ai adăugat %1$s RON la obiectivul: %2$s</string>
+
+    <string name="button_cancel">Anulează</string>
+    <string name="button_add_amount">Adaugă Sumă</string>
+    <string name="button_manage_objective">Gestionează Obiectivul</string>
+
+    <!-- layout -->
+    <string name="welcome_back_message">Bine ai revenit!</string>
+    <string name="action_add">Adaugă</string>
+    <string name="action_request">Cere</string>
+    <string name="action_send">Trimite</string>
+    <string name="challenges_title">Provocări</string>
+    <string name="see_all">Vezi tot</string>
+    <string name="recent_transactions">Tranzacții recente</string>
+    <string name="home_button">Acasă</string>
+    <string name="piggy_bank_button">Pușculiță</string>
+    <string name="goals_button">Obiective</string>
+    <string name="learn_button">Învață</string>
+
+    <string name="account_title">Contul meu</string>
+    <string name="details_section">Detalii</string>
+    <string name="teen_account">Cont adolescent</string>
+    <string name="more_section">Mai multe</string>
+    <string name="budget_button">Bugete</string>
+    <string name="reports_button">Rapoarte</string>
+    <string name="settings_button">Setări</string>
+
+    <string name="profile_text">Profil</string>
+    <string name="notifications_text">Notificări</string>
+    <string name="security_text">Securitate</string>
+    <string name="alert_text">Setează o alertă</string>
+    <string name="language_text">Schimbă limba</string>
+    <string name="home_text">Acasă</string>
+    <string name="budget_text">Bugete</string>
+    <string name="goals_text">Obiective</string>
+    <string name="reports_text">Rapoarte</string>
+    <string name="settings_text">Setări</string>
+
+    <string name="denumire_label">Denumire:</string>
+    <string name="amount_label">Suma(RON):</string>
+    <string name="home_label">Acasă</string>
+    <string name="budget_label">Bugete</string>
+    <string name="goals_label">Obiective</string>
+    <string name="reports_label">Rapoarte</string>
+    <string name="settings_label">Setări</string>
+    <string name="profile_label">Profil</string>
+    <string name="notifications_label">Notificări</string>
+    <string name="security_label">Securitate</string>
+    <string name="set_alert_label">Setează o alertă</string>
+    <string name="change_language_label">Schimbă limba</string>
+    <string name="emergency_fund_text">Fond de urgență</string>
+    <string name="info_text">Alocând o sumă dedicată pentru ...</string>
+    <string name="fund_hint">Suma pentru fond</string>
+    <string name="enter_amount_text">Introdu suma dorită!</string>
+    <string name="fund_created_text">Fond creat!</string>
+
+    <string name="notification_title">Titlul notificării</string>
+    <string name="notification_description">Descrierea notificării</string>
+    <string name="notification_timestamp">12/04/2024 14:30:00</string>
+
+    <string name="add_objective">Adaugă obiectiv</string>
+    <string name="manage_objective">Gestionează obiectivul</string>
+    <string name="amount_added">Suma adăugată (RON):</string>
+    <string name="add_button">Adaugă</string>
+    <string name="cancel_button">Anulează</string>
+    <string name="error_message1">Specifică suma de adăugat!</string>
+    <string name="error_message2">Suma adăugată depășește obiectivul ales!</string>
+    <string name="success_message">Suma a fost adăugată cu succes!</string>
+
+    <string name="hint_text">Scrie...</string>
+    <string name="suma_label">Suma (RON):</string>
+    <string name="iconita_label">Iconiță:</string>
+    <string name="error_message">Completează toate câmpurile!</string>
+    <string name="objective_title">Sneakers</string>
+    <string name="objective_amount">300 RON / 560 RON</string>
+    <string name="view_objectives_text">Vizualizează-ți obiectivele</string>
+
+    <string name="objective_finished_title">Obiectiv Finalizat</string>
+    <string name="objective_finished_message">Felicitări! Ai completat obiectivul: %1$s</string>
+
+    <string name="hint_denumire">Introdu denumirea obiectivului</string>
+    <string name="hint_suma">Introdu suma în RON</string>
+    <string name="hint_suma_fond">Suma pentru fond</string>
+    <string name="hint_scrie">Scrie...</string>
+
+    <string name="button_confirm">Confirmă</string>
+    <string name="select_language_warning">Te rog, selectează o opțiune!</string>
+    <string name="select_language_title">Selectează limba aplicației din meniul de mai jos:</string>
+    <string name="language_updated">Limba a fost actualizată cu succes!</string>
+    <string-array name="language_options">
+        <item>Selectează o opțiune</item>
+        <item>Română</item>
+        <item>English</item>
+        <item>Español</item>
+    </string-array>
+
+    <string name="username_placeholder">John Doe</string>
+    <string name="email_account">Email-></string>
+    <string name="phone_account">Telefon-></string>
+    <string name="password_account">Parola-></string>
+    <string name="email_placeholder">johndoe@example.com</string>
+    <string name="phone_placeholder">+0000000000</string>
+    <string name="password_placeholder">******</string>
+    <string name="show_button">Arată parola</string>
+    <string name="change_button">Schimbă parola</string>
+    <string name="save_button">Salvează parola</string>
+    <string name="logout_button">Deconectare</string>
+    <string name="password_updated">Parola a fost actualizată cu succes!</string>
+    <string name="edit_password_message">Acum poți edita parola.</string>
+
+    <string name="role_adolescent">Adolescent</string>
+    <string name="role_parent">Parent</string>
+
+    <string name="error_updating_password">Eroare la actualizarea parolei. Vă rugăm să încercați din nou.</string>
+    <string name="introdu_venitul_lunar">Introdu venitul lunar</string>
+    <string name="se_va_aplica_regula_50_30_20">Se va aplica regula 50/30/20</string>
+</resources>

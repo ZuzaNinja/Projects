@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white1">#F4E3E3</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="gray_medium">#BDBDBD</color>
+    <color name="gray_dark">#757575</color>
+
+    <color name="orange">#F59227</color>
+    <color name="orange1">#F8BC79</color>
+    <color name="light_orange">#FCDB80</color>
+    <color name="darker_orange">#D76A00</color>
+    <color name="amber">#FFC107</color>
+    <color name="aesthetic_orange">#F4AB6A</color>
+    <color name="alloy_orange">#C35214</color>
+    <color name="apricot_orange">#FBCEB1</color>
+    <color name="atomic_tangerine">#FF9966</color>
+    <color name="bittersweet_orange">#FE6F5E</color>
+    <color name="brifght_orange">#e24c00</color>
+    <color name="bronze_orange">#CD7F32</color>
+    <color name="cadmium_orange">#E6812F</color>
+    <color name="calm_orange">#FAB972</color>
+    <color name="coral">#FF7F50</color>
+    <color name="dark_salmon">#e9967a</color>
+    <color name="blush_pink">#FFC3C3</color>
+    <color name="powder_pink">#FFD8D8</color>
+
+
+
+
+
+
+    <color name="blue">#0089C8</color>
+    <color name="light_blue">#81D4FA</color>
+    <color name="dark_blue">#1976D2</color>
+    <color name="cyan">#00BCD4</color>
+
+    <color name="green">#1CCF23</color>
+    <color name="light_green">#A5D6A7</color>
+    <color name="dark_green">#388E3C</color>
+    <color name="mint_green">#98FF98</color>
+
+    <color name="red">#F40000</color>
+    <color name="light_red">#FFCDD2</color>
+    <color name="dark_red">#D32F2F</color>
+    <color name="peach">#F9D2A7</color>
+
+    <color name="crem">#F5CDA9</color>
+    <color name="gold">#FFD700</color>
+    <color name="brown">#795548</color>
+    <color name="pink">#FF4081</color>
+    <color name="purple">#9C27B0</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
+    <color name="semi_transparent_black">#80000000</color>
+</resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProiectPIU_ManagementFinanciar"
+        tools:targetApi="31">
+        <activity
+            android:name=".login.StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".login.SelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.AuthenticationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".budget.NewBudgetActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home_dashboard.AdolescentDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home_dashboard.ParentDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".budget.ModifyBudgetsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".budget.MainBudgetActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".budget.EmergencyBudgetActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".budget.LongTermBudgetActivity"
+            android:exported="false" />
+
+        <activity android:name=".objective.ObjectiveStartPageActivityAdult"
+            android:exported="false" />
+
+        <activity android:name=".objective.AddObjectiveActivityAdult"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true" />
+
+        <activity android:name=".objective.ViewObjectivesActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+
+        <activity android:name=".objective.ObjectiveStartPageActivityAdolescent"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+
+        <activity android:name=".objective.AddObjectiveActivityAdolescent"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+
+        <activity android:name=".settings.SettingsStartActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+
+        <activity android:name=".settings.NotificationActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+
+        <activity android:name=".settings.NotificationActivityAdolescent"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+
+        <activity android:name=".login.MyAccountActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+
+        <activity android:name=".settings.LanguageSelectionActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+
+        <activity android:name=".reports.ReportsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".reports.CheltuieliActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".reports.CheltuieliAdolescent"
+            android:exported="true" />
+
+        <activity
+            android:name=".reports.ReportsActivityTeen"
+            android:exported="true" />
+
+        <activity
+            android:name=".reports.SavingsAdult"
+            android:exported="true" />
+
+        <activity
+            android:name=".reports.SavingsTeen"
+            android:exported="true" />
+
+        <activity
+            android:name=".reports.ComparareActivity"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

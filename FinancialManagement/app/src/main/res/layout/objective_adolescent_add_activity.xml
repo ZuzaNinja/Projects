@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/budget_add_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:background="@color/white"
+    tools:ignore="ExtraText">
+
+    <LinearLayout
+        android:id="@+id/profile_section"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:background="@drawable/background_square"
+        android:layout_marginStart="-70dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="35dp"
+            android:gravity="center_vertical"
+            android:text="@string/welcome_message"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/notification_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profile_section" />
+
+    <LinearLayout
+        android:id="@+id/formSection"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="35dp"
+        android:padding="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/profile_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Denumire Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:text="@string/denumire_label"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/denumire_input"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_denumire"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Suma Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:text="@string/suma_label"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/suma_input"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:padding="8dp"
+                android:hint="@string/hint_suma"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:inputType="numberDecimal"/>
+
+        </LinearLayout>
+
+        <!-- Iconita Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:text="@string/iconita_label"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/iconita_spinner"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:padding="2dp"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:popupBackground="@color/white"
+                android:scrollbars="vertical"
+                />
+        </LinearLayout>
+
+        <!-- Mesaj de Eroare și Succes -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center">
+
+            <!-- Mesaj Eroare -->
+            <LinearLayout
+                android:id="@+id/errorMessageSection"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/important"
+                    app:tint="@color/red" />
+
+                <TextView
+                    android:id="@+id/errorMessageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_message"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Mesaj Succes -->
+            <LinearLayout
+                android:id="@+id/successMessageSection"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/bell"
+                    app:tint="@color/green"/>
+
+                <TextView
+                    android:id="@+id/successMessageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/success_message"
+                    android:textColor="@color/green"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Butoane -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/paw1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/cat_footprint_icon" />
+
+            <Button
+                android:id="@+id/addObjectiveButton"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:backgroundTint="@color/orange"
+                android:text="@string/add_button"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inria_serif_regular" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:text="@string/cancel_button"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inria_serif_regular"
+                android:backgroundTint="@color/orange"
+                />
+
+            <ImageView
+                android:id="@+id/paw2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/cat_footprint_icon" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cat_photo"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/black_cat_icon" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/footer_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F59227"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onNavigationClick"
+            android:orientation="vertical"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/black_home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_button"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pusculitaButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onNavigationClick"
+            android:orientation="vertical"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/black_piggy_bank" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/piggy_bank_button"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goalsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onNavigationClick"
+            android:orientation="vertical"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/white_lightning" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goals_button"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/learnButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onNavigationClick"
+            android:orientation="vertical"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/black_calculator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/learn_button"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

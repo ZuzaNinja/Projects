@@ -1,0 +1,16 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Culoare buton -->
+    <solid android:color="@color/orange" />
+
+    <!-- Colțuri rotunjite (deși oval nu le necesită) -->
+    <corners android:radius="50dp" />
+
+    <!-- Margini interioare (padding) -->
+    <padding
+        android:left="20dp"
+        android:right="20dp"
+        android:top="10dp"
+        android:bottom="10dp"/>
+</shape>

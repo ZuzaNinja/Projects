@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="register_link" type="id" />
+    <item name="subtitle_text" type="id" />
+    <item name="forgot_password" type="id" />
+</resources>

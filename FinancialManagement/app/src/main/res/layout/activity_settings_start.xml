@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/budget_add_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="@color/white"
+    tools:ignore="ExtraText">
+
+    <!-- Buton 1 - Profil -->
+    <LinearLayout
+        android:id="@+id/profile_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_button_selector"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/female_avatar_icon" />
+
+        <TextView
+            android:id="@+id/text_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rambla_italic"
+            android:text="@string/profile_text"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrow_profile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next" />
+    </LinearLayout>
+
+    <!-- Buton 2 - Notificari -->
+    <LinearLayout
+        android:id="@+id/notifications_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_selector"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/profile_button"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_notifications"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bell1" />
+
+        <TextView
+            android:id="@+id/text_notifications"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rambla_italic"
+            android:text="@string/notifications_text"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrow_notifications"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next" />
+    </LinearLayout>
+
+    <!-- Buton 3 - Securitate -->
+    <LinearLayout
+        android:id="@+id/security_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_selector"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/notifications_button"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_security"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/security_shield1" />
+
+        <TextView
+            android:id="@+id/text_security"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rambla_italic"
+            android:text="@string/security_text"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrow_security"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next" />
+    </LinearLayout>
+
+    <!-- Buton 4 - Seteaza o alerta -->
+    <LinearLayout
+        android:id="@+id/alert_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_selector"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/security_button"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_alert"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/megaphone" />
+
+        <TextView
+            android:id="@+id/text_alert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rambla_italic"
+            android:text="@string/alert_text"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrow_alert"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next" />
+    </LinearLayout>
+
+    <!-- Buton 5 - Schimba limba -->
+    <LinearLayout
+        android:id="@+id/language_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button_selector"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/alert_button"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_language"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/globe2" />
+
+        <TextView
+            android:id="@+id/text_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rambla_italic"
+            android:text="@string/language_text"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrow_language"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/next" />
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/navigationMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F59227"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/black_home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_text"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/budgetButton"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/black_card" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/budget_text"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goalsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/black_lightning" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goals_text"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reportsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/black_bar_chart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reports_text"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settingsButton"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/white_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_text"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
