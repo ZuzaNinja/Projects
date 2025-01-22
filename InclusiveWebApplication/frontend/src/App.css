@@ -1,0 +1,214 @@
+/* App.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  overflow: hidden; /* Prevent scroll when content is faded out */
+}
+
+#app-container {
+  margin-left: 165px;
+  margin-top: 0;
+}
+
+.fade-container {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0); /* Reset the transform */
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateX(100%); /* Move to the right */
+  pointer-events: none; /* Disable interaction with faded-out content */
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px; /* Set the font size to 24px */
+}
+
+.card {
+  padding: 2em;
+  text-align: center;
+  margin-left: 165px;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px; /* Set the font size to 16px */
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  height: 60px; /* Set the height to 60px */
+  width: 360px; /* Set the width to 300px */
+  border-radius: 10px; /* Set the border-radius to 10px */
+  background-color: transparent;
+  border: 2px solid #ac1cd0;
+  outline: none;
+  font-size: 16px; /* Set the font size to 16px */
+  color: rgba(0, 0, 0, 0.25);
+}
+
+input:focus {
+  box-shadow: none;
+}
+
+p {
+  font-weight: bold;
+  font-size: 16px; /* Set the font size to 16px */
+}
+
+.hh1 {
+  margin-left: 165px;
+  margin-top: 0;
+  font-size: 30px; /* Set the font size to 30px */
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #1E1E1E;
+}
+
+.error-button {
+  position: absolute;
+  top: 68%;
+  left: 504px; /* Set left position to 633px */
+  transform: translate(0, -50%);
+  height: 78px; /* Set the height to 50px */
+  width: 78px; /* Set the width to 50px */
+  background-color: #ac1cd0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 15px; /* Set the border-radius to 15px */
+  background-image: url('E:\polihack\frontend\src\Icons/arrow.png');
+  background-position: center;
+  background-size: 30%; /* Adjust the size (percentage or specific value) */
+  background-repeat: no-repeat;
+}
+
+.image-container {
+  position: absolute;
+  top: 50%;
+
+  left: 800px; /* Set initial left position */
+  transform: translate(0, -50%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transition property for opacity and transform */
+}
+
+.image-container img {
+  height: 392px; /* Adjust the height to your needs */
+  width: 563px; /* Adjust the width to your needs */
+}
+
+.rectangle {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px; /* Adjust the width to your needs */
+  max-height: 500px; /* Set a maximum height */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds the height */
+  border-radius: 15px; /* Set the border-radius to 15px */
+  background-color: rgba(172, 28, 208, 0.3); /* Adjust the color as needed */
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeInFluid 3s ease-in-out forwards; /* Adjust the animation duration as needed */
+  color: #383636ec;
+  text-align: center;
+  font-family: Roboto;
+  scrollbar-color: purple rgba(172, 28, 208, 0.3); /* Firefox and Webkit (Chrome, Brave, Safari) */
+  scrollbar-width: thin;
+}
+
+
+/*.rectangle-left {
+  position: fixed;
+  top: 56%;
+  left: 465px;
+  transform: translate(-50%, -50%);
+  width: 400px; 
+  height: 400px; /* Adjust the height to your needs 
+  border-radius: 15px; /* Set the border-radius to 15px 
+  background-color: #D9D9D9; /* Adjust the color as needed 
+  opacity: 0; /* Start with opacity 0 
+  animation: fadeInFluid 3s ease-in-out forwards; /* Adjust the animation duration as needed 
+}*/
+
+@keyframes fadeInFluid {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-fluid {
+  opacity: 1;
+}
+
+.response-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
+
+.response-details p {
+  margin-bottom: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.response-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within each item */
+}
+
+.number {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 5px; /* Add some vertical spacing between numbers and text */
+}
+
+.text {
+  font-size: 16px;
+}
+
+.spacer {
+  margin: 0 10px; /* Adjust the space between items */
+}
+
+.loading-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Make sure it's above other elements */
+}
+
+.loading-spinner {
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-top: 8px solid #ac1cd0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
