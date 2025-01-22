@@ -1,0 +1,67 @@
+{% extends "login/base.html" %}
+
+{% block content %}
+<style>
+    body {
+        background: linear-gradient(to right, #dbceeb, #87cefa);
+        min-height: 100vh;
+        margin-top: 100px;
+        overflow-x: hidden;
+    }
+    .content-section {
+        display: flex;
+        margin-bottom: -300px;
+        align-items: flex-start; /* Keeps items aligned at the top */
+        overflow-x: auto; /* Adds horizontal scroll if content is too wide */
+    }
+    .article-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    .media-body {
+        flex-grow: 1;
+        max-width: calc(100% - 120px); /* Prevents the text container from growing too large */
+    }
+    .article-content {
+        word-break: break-word; /* Breaks long words */
+        overflow-wrap: break-word; /* Wraps long words to the next line */
+    }
+    .article-title {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .article-title:hover {
+        text-decoration: underline;
+    }
+    .article-metadata a {
+        color: #555;
+    }
+    .article-metadata a:hover {
+        color: #007bff;
+    }
+    .article-metadata small {
+        display: block;
+        color: #999;
+        margin-top: 5px;
+    }
+</style>
+
+
+    {% for post in posts %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}" alt="{{ post.author.username }}">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ post.author }}</a>
+                    <small class="text-muted">{{ post.date_posted }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+    {% empty %}
+        <p>No posts to display.</p>
+    {% endfor %}
+{% endblock content %}

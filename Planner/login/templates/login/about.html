@@ -1,0 +1,75 @@
+{% extends "login/base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+</style>
+<div class="fullscreen-image-container">
+    <img src="{% static 'images/cutu.jpeg' %}" alt="About Us Image">
+</div>
+
+<div class="content-container">
+    <section class="mission-statement">
+        <h2>Our Mission</h2>
+        <p>Our mission is to revolutionize the way people plan their trips. We understand that planning a vacation should be as relaxing and enjoyable as the trip itself.</p>
+        <p>That's why we are dedicated to eliminating the stress and hassle often associated with trip planning. Our user-friendly platform offers a comprehensive suite of tools designed to streamline every aspect of trip planning. </p>
+        <p>From selecting destinations to booking accommodations, from arranging transportation to suggesting must-see attractions, we've got it all covered. </p>
+        <p>Our goal is to provide a seamless, one-stop solution for all your travel needs, ensuring that your next vacation truly starts the moment you begin planning.</p>
+        <p> We are committed to creating an intuitive and enjoyable planning experience that caters to the needs of all travelers - whether you're a solo adventurer, a family on a holiday, or a group of friends on an escapade. With Travel Planner, embark on your journey with confidence, knowing that every detail of your trip has been meticulously taken care of.</p>
+        <p>Let us handle the planning, so you can focus on what really matters - making unforgettable memories</p>
+    </section>
+
+    <section class="team">
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+
+            <div class="team-member">
+                <img src="{% static 'images/Andreea.jpg' %}" alt="Caprita Andreea-Gabriela">
+                <h3>Caprita Andreea-Gabriela</h3>
+                <p>Regina la codat</p>
+            </div>
+
+            <div class="team-member">
+                <img src="{% static 'images/Gesica.jpg' %}" alt="Goron Gesica">
+                <h3>Goron Gesica</h3>
+                <p>Regina la codat</p>
+            </div>
+
+            <div class="team-member">
+                <img src="{% static 'images/Denisa.jpg' %}" alt="Lodroman Denisa-Georgiana">
+                <h3>Lodroman Denisa-Georgiana</h3>
+                <p>Regina la codat</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="values">
+        <h2>Our Values</h2>
+        <p><strong>Customer-Centric Innovation:</strong> At the heart of our service is the unwavering commitment to our users' needs. We continually evolve, adapting to changing travel trends and incorporating user feedback, ensuring that our platform remains at the forefront of trip planning innovation.</p>
+        <p><strong>Simplicity and Ease of Use:</strong> We believe that the best solutions are those that are easy to use. Our platform is designed with simplicity in mind, ensuring that trip planning is accessible, intuitive, and hassle-free for everyone, regardless of tech-savviness or travel experience.</p>
+        <p><strong>Reliability and Trustworthiness:</strong> We understand the importance of trust in travel planning. Our users rely on us for accurate, up-to-date information and dependable service. We strive to be a trusted partner in every journey, providing peace of mind from the planning phase to the trip itself.</p>
+        <p><strong>Inclusivity and Diversity:</strong> Travel is for everyone, and so is our platform. We value the diversity of our users and strive to cater to a wide array of travel preferences, needs, and budgets. We aim to create an inclusive environment where all travelers feel welcomed and represented.</p>
+        <p><strong>Sustainable and Responsible Travel:</strong> We are committed to promoting travel that respects local communities and the environment. Our platform encourages and facilitates sustainable travel choices, helping our users to explore the world responsibly.</p>
+        <p><strong>Passion for Exploration:</strong> Our team shares a deep-rooted passion for travel and exploration. This passion drives us to deliver a service that inspires and excites, opening up a world of possibilities for our users and encouraging them to discover the joys of travel.</p>
+        <p><strong>Collaboration and Community:</strong> We believe in the power of community in shaping memorable travel experiences. Our platform not only connects travelers with destinations but also fosters a community of like-minded individuals who share insights, stories, and tips, enriching the travel experience for all.</p>
+    </section>
+    
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <div class="email-container">
+            <p class="email">andreea.caprita@gmail.com</p>
+            <p class="email">goron.gesica@gmail.com</p>
+            <p class="email">lodroman.denisa@gmail.com</p>
+        </div>
+    </section>
+    
+</div>
+</div>
+
+{% endblock %}

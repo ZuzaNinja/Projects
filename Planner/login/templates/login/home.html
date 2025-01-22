@@ -1,0 +1,67 @@
+{% extends "login/base.html" %}
+
+{% load static %}  {# Add this line to load the static tag library #}
+
+{% block content %}
+<style>
+  body {
+      overflow-x: hidden;
+  }
+
+</style>
+  <div class="container-fluid">  {# Use container-fluid for full-width containers #}
+    <header class="hero"> 
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="{% static 'CinematicVideo/video.mp4' %}" type="video/mp4">
+      </video>
+      <div class="content">
+        <h1>Pick Your Adventure</h1>
+        <a href="#map" id="explore-button">Explore</a>
+      </div>   
+    </header>
+  </div>  {# Close the container-fluid div #}
+
+  <div class="container-fluid">
+    <section id="map">
+      <div class="hero">
+        <!-- The callback parameter is required, so we use console.debug as a noop -->
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvbdqx2UzjhsrCFwVViABePxSrEOq4y3k&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>
+        <style>
+          /* Always set the map height explicitly to define the size of the div
+          * element that contains the map. */
+          gmp-map {
+            height: 100%;
+          }
+
+          /* Optional: Makes the sample page fill the window. */
+          html,
+          body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+
+          }
+        </style>
+        <gmp-map center="45.464256286621094,9.189724922180176" zoom="14" map-id="DEMO_MAP_ID">
+          <gmp-advanced-marker position="45.464256286621094,9.189724922180176" title="My location"></gmp-advanced-marker>
+        </gmp-map>
+      </div>
+    </section>
+  </div>  {# Close the second container-fluid div #}
+
+  <!-- Add this script in the head of your HTML document -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+{% endblock %}

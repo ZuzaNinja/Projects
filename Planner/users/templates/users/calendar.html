@@ -1,0 +1,98 @@
+{% extends "login/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="left-side-image">
+    <img src="{% static 'images/cherryblossom.jpeg' %}" alt="Descriptive Alt Text">
+</div>
+
+<div class="content-container">
+        <a class="btn btn-info left" href="{% url 'users:calendar' %}?{{ prev_month }}">Previous Month</a>
+        <a class="btn btn-info right" href="{% url 'users:calendar' %}?{{ next_month }}">Next Month</a>
+
+    <div class="calendar-container">
+        {{ calendar }} {# This will display the calendar HTML generated in your view #}
+    </div>
+</div>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .left-side-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 37%; /* Cover half of the screen */
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .left-side-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; /* Ensure the image covers the entire div */
+    }
+
+    .content-container {
+        margin-left: 5%; /* Start the content from the middle of the screen */
+        width: -20%; /* Use the right half of the screen */
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    .calendar-container {
+        width: 100%;
+        margin: auto;
+        padding: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .calendar tr,
+    .calendar td {
+        border: 1px solid black;
+    }
+
+    .calendar th {
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .calendar td {
+        width: 200px;
+        height: 150px;
+        padding: 20px 0px 0px 5px;
+    }
+
+    .month {
+        font-size: 25px;
+    }
+
+
+
+    ul {
+        height: 100%;
+        padding: 0px 5px 0px 20px;
+    }
+
+    a {
+        color: #17a2b8;
+    }
+
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+
+{% endblock %}

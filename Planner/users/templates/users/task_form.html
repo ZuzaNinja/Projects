@@ -1,0 +1,45 @@
+{% extends "login/base.html" %}
+
+{% block content %}
+<style>
+    body {
+        background: linear-gradient(to right, #dbceeb, #87cefa);
+        margin-left: 50px;
+        margin-top: 100px;
+        overflow-x: hidden;
+    }
+    .form-container {
+        border: 2px solid #ddd;
+        padding: 15px; /* Reduced padding */
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 50%; /* Adjust width as needed */
+        margin: 0 auto; /* Center the form */
+        margin-bottom: 20px;
+        border-radius: 15px; /* Increased border-radius for rounder corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: added a subtle shadow */
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="form-container">
+<h3>Task Form</h3>
+<a href="{% url 'users:task_list' %}">Go back</a>
+
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+{% endblock content %}

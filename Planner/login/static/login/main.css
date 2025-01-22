@@ -1,0 +1,402 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mongolian Baiti', sans-serif;
+  font-family: 'Mongolian Baiti', sans-serif;
+  
+}
+
+html, body {
+html, body {
+  height: 100%;
+  
+}
+
+.full-screen-bg {
+  position: relative; /* Needed for absolute positioning of children */
+  height: 100vh;
+  width: 100vw;
+}
+
+.background-image-container {
+  position: relative; /* Position it absolutely to cover the entire parent */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.text-content-section {
+  flex: 1; /* Allows the section to grow as needed */
+  margin-right: 20px; /* Space between form and image */
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.full-screen-bg {
+  position: relative; /* Needed for absolute positioning of children */
+  height: 100vh;
+  width: 100vw;
+}
+
+.background-image-container {
+  position: absolute; /* Position it absolutely to cover the entire parent */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text-content-section {
+  flex: 1; /* Allows the section to grow as needed */
+  margin-right: 20px; /* Space between form and image */
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.container-fluid {
+  padding: 0;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+  position: relative;
+  padding: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#explore-section {
+  padding: 50px;
+}
+
+.fullscreen-bg h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.fullscreen-image-container {
+  width: 100vw;
+  height: 100vh; /* Full height */
+  position: relative;
+  overflow: hidden;
+}
+
+.fullscreen-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-container {
+  padding: 50px;
+  align-content: normal;
+  text-align: left;
+  width: 150%; /* Ensure it takes the full width */
+}
+
+
+.mission-statement, .team, .values, .contact {
+  margin-bottom: 40px;
+}
+
+/* Style for the text sections */
+.content-container h2 {
+  font-size: 65px;
+  margin-bottom: 50px;
+  line-height: 1.5; /* Put in line with the sentences */
+}
+
+
+.content-container p {
+  font-size: 20px;
+  line-height: 1.0;
+  color: #555;
+  margin-bottom: 15px; /* Add spacing between paragraphs */
+}
+
+
+
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: left;
+}
+
+.content-section legend {
+  margin-bottom: 20px;
+}
+
+.content-section form {
+  max-width: 400px; /* Adjust as needed */
+  margin: auto;
+}
+
+.content-section .form-group {
+  text-align: left;
+}
+
+.content-section .btn {
+  font-weight: bold;
+}
+
+.content-section .border-top {
+  margin-top: 20px;
+}
+
+.text-muted a {
+  font-weight: bold;
+}
+
+.content-section form, .text-content-section {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adjust the space between form and image */
+  width: 90%; /* Adjust the width as needed */
+  max-width: 900px;
+}
+
+.login-image-container {
+  flex: 0 1 30%; /* Adjust size of the image container */
+  max-width: 300px; /* Maximum width of the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.login-image-container img {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+
+
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: left;
+}
+
+.content-section legend {
+  margin-bottom: 20px;
+}
+
+.content-section form {
+  max-width: 400px; /* Adjust as needed */
+  margin: auto;
+}
+
+.content-section .form-group {
+  text-align: left;
+}
+
+.content-section .btn {
+  font-weight: bold;
+}
+
+.content-section .border-top {
+  margin-top: 20px;
+}
+
+.text-muted a {
+  font-weight: bold;
+}
+
+.content-section form, .text-content-section {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adjust the space between form and image */
+  width: 90%; /* Adjust the width as needed */
+  max-width: 900px;
+}
+
+
+/* Add styles for the team members if needed */
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  margin: 15px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: blue;
+  font-style: italic;
+}
+
+.email-container {
+  display: flex;
+  justify-content: space-between; /* This will space out the items */
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Set the width to span the entire container */
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: auto; /* Center the container */
+}
+
+.email-container {
+  display: flex;
+  justify-content: flex-start; /* Align items at the start */
+}
+
+.email:not(:last-child) {
+  margin-right: 40px; /* Add right margin to all email elements except the last one */
+}
+
+
+.custom-button {
+  border-radius: 22.5px;
+  border: 2px #002558 solid;
+  background-color: #fff;
+  color: #002558;
+  font-size: 18.75px;
+  font-family: 'Mongolian Baiti', sans-serif; /* Change to Mongolian Baiti or a font of your choice */
+  font-weight: 300;
+  line-height: 24px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #002558;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black; 
+  z-index: 10; 
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white; 
+  font-size: 17px;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 160px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.content a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  border: 2px solid #fff;
+  padding: 14px 70px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.back-video {
+  position: absolute;
+  top: -10%; /* Move video up */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover; 
+  transform: scale(1.1); /* Scale up the video */
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}}

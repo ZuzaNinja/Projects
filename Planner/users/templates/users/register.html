@@ -1,0 +1,41 @@
+{% extends "login/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="full-screen-bg">
+    <!-- Full Screen Background Image -->
+    <div class="background-image-container" style="background-image: url('/static/images/loginbackground.jpg');"></div>
+
+    <!-- Form Container -->
+    <div class="login-container">
+        <!-- Text Content Section for the Form -->
+        <div class="text-content-section">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4 font-weight-bold">Join Today</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Already Have An Account? <a class="ml-2" href="{% url 'login1' %}">Sign In</a>
+                </small>
+            </div>
+        </div>
+
+        <!-- Image Container (You can change the image as needed) -->
+        <div class="login-image-container">
+            <img src="/static/images/login.jpg" alt="Join Today Image" />
+        </div>
+    </div>
+    <style>
+        html,
+        body {
+           margin-top: 28px;
+        }
+    </style>
+</div>
+{% endblock content %}
